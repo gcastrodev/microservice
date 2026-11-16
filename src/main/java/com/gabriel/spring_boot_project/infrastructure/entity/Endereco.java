@@ -12,8 +12,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "endereco")
-public class Endereco {
 
+public class Endereco {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -25,7 +25,7 @@ public class Endereco {
   private String complemento;
   @Column(name = "cidade",   length = 150)
   private String cidade;
-  @Column(name = "esatdo", length = 2)
+  @Column(name = "estado", length = 2)
   private String estado;
   @Column(name = "cep", length = 9)
   private String cep;

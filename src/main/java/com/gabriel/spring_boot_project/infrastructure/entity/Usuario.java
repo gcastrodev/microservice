@@ -14,8 +14,8 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "usuario")
-public class Usuario {
 
+public class Usuario {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
@@ -27,7 +27,8 @@ public class Usuario {
   private String senha;
   @OneToMany(cascade = CascadeType.ALL)
   @JoinColumn(name = "usuario_id", referencedColumnName = "id")
-  private List<Endereco> endereco;
+  private List<Endereco> enderecos;
+  @OneToMany(cascade = CascadeType.ALL)
   @JoinColumn(name = "usuario_id", referencedColumnName = "id")
-  private List<Telefone> telefone;
+  private List<Telefone> telefones;
 }
